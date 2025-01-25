@@ -7,7 +7,7 @@ title: Proposal
 Our project focuses on **Sichuan Mahjong**, a fascinating game with unique mechanics.  
 If the following explanation is not clear enough, here is a [video](https://www.youtube.com/watch?v=bj5LEAXcNwg) to help you better understand the game.
 
-## Game Basics
+### Game Basics
 
 The game consists of **108 cards** in total, categorized into three suits: **Wan, Tong, and Tiao.** Each suit contains numbers **1 to 9**, with **four copies of each card.**  
 For example, there are four **1 Wan**, four **4 Tong**, and four **9 Tiao** cards.
@@ -15,7 +15,7 @@ For example, there are four **1 Wan**, four **4 Tong**, and four **9 Tiao** card
 At the start of the game, four players take turns. Three players receive **13 cards each**, while the **dealer (or "master")** receives **14 cards.** The dealer is always player **number 1.**  
 This setup leaves **55 cards** remaining in the deck.
 
-## Objective and Winning Conditions
+### Objective and Winning Conditions
 
 To win, players must form a **winning combination** using the cards in their hand. A standard winning hand consists of:
 
@@ -36,13 +36,13 @@ The method of obtaining the winning card affects the game's outcome:
 - If a player wins by drawing the card themselves, the remaining players without a winning hand must pay the winner.
 - If a player wins using a discarded card, the player who discarded it bears the cost of the winning combination.
 
-## Gameplay Flow
+### Gameplay Flow
 
 1. The dealer (player 1) discards the first card.
 2. The remaining players each draw a new card and discard one in turn.
 3. This cycle continues until either there are no more cards in the deck or three players have completed their winning hands.
 
-## Special Moves
+### Special Moves
 
 A key feature of the game is **Peng (碰).**  
 If a player has two identical cards and an opponent discards the same card, they can claim it to complete a triplet (three of a kind).  
@@ -50,7 +50,7 @@ After doing so, the player must discard another card from their hand, and the ga
 
 For example, if player 1 discards a card and player 3 claims it for a **Peng**, the turn then moves to player 4.
 
-## AI Development Goals
+### AI Development Goals
 
 Our AI aims to maximize its **win rate**, which consists of two primary objectives:
 
@@ -64,11 +64,11 @@ These two goals are often conflicting:
 
 To balance these objectives, the AI must develop both **calculation** and **reasoning** skills:
 
-### Calculation
+#### Calculation
 
 - Since the total number of cards is fixed, the AI can track which cards have been discarded and are no longer available.
 
-### Reasoning
+#### Reasoning
 
 - Since the AI cannot see opponents' hands, it must infer their possible holdings based on their discards.
 - For example, if a player discards a 9, it may indicate they already have a 7-8-9 sequence and no longer need the extra 9.
