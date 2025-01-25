@@ -10,7 +10,7 @@ title:  Team
 ***UCI Net ID***: zli32
 
 ## USER 2
-***UCI Net ID***: Zhihaow9
+***UCI Net ID***: zhihaow9
 
 ## USER 3
 ***UCI Net ID***: ucinetid3
