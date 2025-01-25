@@ -6,11 +6,11 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
+## Zhengxuan Li
 ***UCI Net ID***: zli32
 
-## USER 2
+## Zhihao Wu
 ***UCI Net ID***: zhihaow9
 
-## USER 3
+## Alexander Gorica
 ***UCI Net ID***: agorica
