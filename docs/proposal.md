@@ -4,34 +4,80 @@ title: Proposal
 ---
 
 # Summary of the Project
-Our project is based on Sichuan Mahjong, a really interesting game. In case the explanation is not enough, here is a video to help you understand. 
+Our project focuses on **Sichuan Mahjong**, a fascinating game with unique mechanics.  
+If the following explanation is not clear enough, here is a [video](https://www.youtube.com/watch?v=bj5LEAXcNwg) to help you better understand the game.
 
-First of all, there are 108 cards in total. The cards are categorized in 3 kinds: wan, tong, tiao. Each of the wan, tong, tiao has numbers 1 - 9, and each of the cards has 4 in total. For example, there are four 1wan, four 4tong, and four 9 tiao. 
+## Game Basics
 
-Then the game starts, there are four players in order in this game, like number 1, number 2, number 3 and number 4. Three players get 13 cards as start-up and one player gets 14 cards, who is called master. Master is always the player number 1. In this situation, there are 55 cards remaining in the shoe. 
+The game consists of **108 cards** in total, categorized into three suits: **Wan, Tong, and Tiao.** Each suit contains numbers **1 to 9**, with **four copies of each card.**  
+For example, there are four **1 Wan**, four **4 Tong**, and four **9 Tiao** cards.
 
-In order to win, players should form a winning combination using the card in their hand, which is 3*4 + 1*2. 
-3*4 is four sets of 3 cards. The 3-card combination can be a straight, like 1, 2, 3. Or it can be the same, like 6, 6, 6. Remember, each 3 card combination must be the same kind. 
-1*2 is 1 set of 2 cards. The 2-card combination must be the same kind and same number, like 7, 7
-In the condition that any player is only one card away from the winning combination, there are two ways to get the card.
-Get it by yourself.
-Get it from others’ throw-out card
-For the winning combinations, there are different values for those. Once a player has the winning combination, if the player wins by getting by themself, the rest who don’t have winning combination will pay for the value. If the player wins by getting from others’ throw-out cards, The one who throws out the card will pay for the winning combination.
+At the start of the game, four players take turns. Three players receive **13 cards each**, while the **dealer (or "master")** receives **14 cards.** The dealer is always player **number 1.**  
+This setup leaves **55 cards** remaining in the deck.
 
-In the first round, the master will throw out a card. The rest of the players will get a new card and throw out a card. And in the rest rounds, people will get a new card and throw out a card. 
+## Objective and Winning Conditions
 
-Here is the key point of this game. When one has two of the same kind and same cards, and someone throws out this card, they can do an operation: peng. It means that you make a 3-card combination with your two cards and the one others throw out. At this point, since you get a new card, you need to throw out one card. And the game continues by the next player. For example, number 1 throws out a card and number 3 gets this card, the next player who gets a card is number 4.
+To win, players must form a **winning combination** using the cards in their hand. A standard winning hand consists of:
 
-The game will not end until no more cards in the shoe or three players have the winning combination.
-These are the basic rules of this game, just in case you want to know.  Our AI is trying to learn to make his win rate as high as possible. The win rate has two aspects.
-1. It will try to be the first one who has the winning combination.
-2. It will try to form the better winning combination. 
+- **Four sets of three cards (34 cards total):**  
+  - A set can either be a sequence (e.g., 1-2-3) or a triplet (e.g., 6-6-6).
+  - Each set must belong to the same suit.
 
-Actually these two are in conflict and the AI will try the best to reach the balance. For the first aspect, if the player wants to win as fast as possible, then the winning combination will not be that valuable. However, if the player wants to form the better, the more valuable, winning combination, the player is more likely to wait until they are satisfied. Hence, to reach the balance, the AI needs to learn calculating and reasoning. Calculating is, since the total number of the cards are solid, players can tell how many cards have been thrown out, which is the ones players can never get. However, calculating is not enough to win since we don’t the rest of the cards are either in other players’ hands or in the shoe. Hence, the AI will learn reasoning, which is to guess what cards the players have by observing what they have thrown out. For example, when one throws out a 9, it basically means the player has already get a 7, 8, 9 in hand since the 7, 8, 9 is already a combination and the other 9 is useless. There are plenty of similar logics that can help the AI to identify what card is possibly in the shoe and avoid to throw cards that make others win. Along with the continuous simulation games, the AI will get better and better, which is Reinforcement Learning.
+- **One pair (2 cards):**  
+  - The pair must have the same suit and number, such as 7-7.
 
+When a player is **one card away** from forming a set, they can obtain the needed card in two ways:
+
+1. **Drawing it from the deck.**  
+2. **Claiming it from an opponent's discarded card.**
+
+The method of obtaining the winning card affects the game's outcome:
+
+- If a player wins by drawing the card themselves, the remaining players without a winning hand must pay the winner.
+- If a player wins using a discarded card, the player who discarded it bears the cost of the winning combination.
+
+## Gameplay Flow
+
+1. The dealer (player 1) discards the first card.
+2. The remaining players each draw a new card and discard one in turn.
+3. This cycle continues until either there are no more cards in the deck or three players have completed their winning hands.
+
+## Special Moves
+
+A key feature of the game is **Peng (碰).**  
+If a player has two identical cards and an opponent discards the same card, they can claim it to complete a triplet (three of a kind).  
+After doing so, the player must discard another card from their hand, and the game proceeds to the next player.
+
+For example, if player 1 discards a card and player 3 claims it for a **Peng**, the turn then moves to player 4.
+
+## AI Development Goals
+
+Our AI aims to maximize its **win rate**, which consists of two primary objectives:
+
+1. **Winning as quickly as possible.**
+2. **Forming high-value winning combinations.**
+
+These two goals are often conflicting:
+
+- Pursuing a quick win may result in a less valuable hand.
+- Waiting for a higher-value combination increases the risk of losing opportunities.
+
+To balance these objectives, the AI must develop both **calculation** and **reasoning** skills:
+
+### Calculation
+
+- Since the total number of cards is fixed, the AI can track which cards have been discarded and are no longer available.
+
+### Reasoning
+
+- Since the AI cannot see opponents' hands, it must infer their possible holdings based on their discards.
+- For example, if a player discards a 9, it may indicate they already have a 7-8-9 sequence and no longer need the extra 9.
+
+Through continuous simulations and learning, the AI will improve its performance using **Reinforcement Learning (RL)** techniques.  
+Over time, it will become better at predicting opponents' strategies and making optimal decisions to increase its win rate.
 
 # AI/ML Algorithms
-Reinforcement learning with a model-free, off-policy Deep Q-Network (DQN) algorithm.
+We will likely use an off-policy DQN reinforcement learning method to train our Mahjong AI to optimize hand discards based on opponent behavior and what tiles are known to us (our hand + the discard pile).
 
 
 # Evaluation Plan
