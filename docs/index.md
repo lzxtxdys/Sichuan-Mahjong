@@ -12,7 +12,8 @@ Reports:
 - [Final](final.html)
 
 
-![Alt text](/Users/zhengxuanli/Necessary File/iShot_2025-02-21_17.29.07.png)
+![Mahjong Screenshot](images/Mahjong_screenshot.png)
+
 
 
 
