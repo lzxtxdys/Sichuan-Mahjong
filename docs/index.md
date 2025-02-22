@@ -11,6 +11,9 @@ Reports:
 - [Status](status.html)
 - [Final](final.html)
 
+
+![Alt text](/Users/zhengxuanli/Necessary File/iShot_2025-02-21_17.29.07.png)
+
 What's Markdown (`.md`)?
 
 Markdown is markup that lets you write hypertext (HTML) documents
