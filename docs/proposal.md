@@ -29,13 +29,9 @@ These are the basic rules of this game, just in case you want to know.  Our AI i
 
 Actually these two are in conflict and the AI will try the best to reach the balance. For the first aspect, if the player wants to win as fast as possible, then the winning combination will not be that valuable. However, if the player wants to form the better, the more valuable, winning combination, the player is more likely to wait until they are satisfied. Hence, to reach the balance, the AI needs to learn calculating and reasoning. Calculating is, since the total number of the cards are solid, players can tell how many cards have been thrown out, which is the ones players can never get. However, calculating is not enough to win since we don’t the rest of the cards are either in other players’ hands or in the shoe. Hence, the AI will learn reasoning, which is to guess what cards the players have by observing what they have thrown out. For example, when one throws out a 9, it basically means the player has already get a 7, 8, 9 in hand since the 7, 8, 9 is already a combination and the other 9 is useless. There are plenty of similar logics that can help the AI to identify what card is possibly in the shoe and avoid to throw cards that make others win. Along with the continuous simulation games, the AI will get better and better, which is Reinforcement Learning.
 
-Summary Update: Each round of games only serves as a data base. At first, the AI will have some initial guesses like the one I mentioned in the previous summary. Then the AI will verify them in the following games. In this process，the AI will give rate these guess and it will utilize the most useful ones. Once the AI has done the evaluate part, the success rate will greatly evaluate.
-
 
 # AI/ML Algorithms
 Reinforcement learning with a model-free, off-policy Deep Q-Network (DQN) algorithm.
-
-Algorithms update: We decide to use decision tree and random forest. They have a common advantage is that they apply to the decision which forced by the rules. Also, they have little calculation so that the decision can be made quickly.
 
 
 # Evaluation Plan
@@ -44,11 +40,3 @@ For qualitative evaluation, we will focus on analyzing the AI’s strategic deci
 To visually represent the evaluation, we will use graphs and charts that illustrate the AI’s win rate improvement and average combination values over time. Comparative analysis against baseline players will be presented through bar charts or similar visualizations. Heatmaps will be used to explain the AI’s decision-making process, such as its reasoning for selecting or discarding specific cards based on the game state. These visualizations will provide an intuitive understanding of the AI’s strategic development and performance.
 The evaluation will be conducted on simulated Sichuan Mahjong games adhering to standard rules. The AI is expected to achieve at least a 20% higher win rate than random players and a 10% higher average combination value than rule-based players. These expectations will demonstrate the AI’s ability to balance between winning quickly and forming valuable combinations. By combining both quantitative and qualitative evaluation approaches, we aim to ensure a robust assessment of the AI’s performance and identify potential areas for further improvement.
 
-Evaluation Update: Here is some aspects we think will be useful to evaluate the AI
-1. win rate: the AI should win at least 40% - 50% of games. Maybe we will not go the AI-human player stage but at least it should be 50% better than the robot who are playing along with the rules.
-2. expected value of each move: During the game, it will print out each move so that we can observe if their move is correct or logical.
-3. opponent hand prediction accuracy: We will check if there are any games that the AI's discard make others succeed. In our expect, such situation should be lower than 30%.
-
-
-#Remaining goals&challenges
-During the contiuous game, we found the winning rate indeed greatly elevated. However, sometime when I check the game's print out, I found it tend to be the first to win rather than find the the balance between win quick and win bigger. I think the problem is that it has not enough learning database so that it can't decide whether it can get the tile that will make it bigger. Also, when I decided to use the decision tree, i found that it can't handle the complicate strategy and then to fall into local optimization. In another words, it tend to make sure its tile stay in the situation that has more opportunities to win. Indeed this kind of tiles are easy to win, but it wins too little unless it has a great startup tiles. for example, [1w, 2w, 3w, 3w, 4w, 5w, 6w, 7w, 8w, 9w], [1T, 2T, 3T]. In this occasion, it can win by getting 3w, 6w, 9w. In this most optimistic situation, it can have 9 tiles to win. However, in my aspect, when it get the 3w, 6w, 9w, it should try to keep it and discard T tiles so that it can have a better change to win bigger. 
