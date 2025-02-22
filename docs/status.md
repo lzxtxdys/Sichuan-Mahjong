@@ -1,3 +1,5 @@
+video link: https://www.youtube.com/watch?v=pg4bR1Da1Uw
+
 Summary Update: Each round of games only serves as a data base. At first, the AI will have some initial guesses like the one I mentioned in the previous summary. Then the AI will verify them in the following games. In this process，the AI will give rate these guess and it will utilize the most useful ones. Once the AI has done the evaluate part, the success rate will greatly evaluate.
 
 Algorithms update: We decide to use decision tree and random forest. They have a common advantage is that they apply to the decision which forced by the rules. Also, they have little calculation so that the decision can be made quickly.

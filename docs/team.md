@@ -11,7 +11,7 @@ title:  Team
 https://github.com/lzxtxdys
 
 ## USER 2
-***UCI Net ID***: zhihaow9
+***UCI Net ID***: zhihaow9 https://github.com/Wasabi1028
 
 ## USER 3
-***UCI Net ID***: agorica
+***UCI Net ID***: agorica  https://github.com/gorica0
