@@ -73,9 +73,9 @@ In this photo, you can see that 1AI winning games count is 20 times of the 4AI o
 ### Method 2: Learning Over Time
 <img src="images/problem4.png" alt="Problem Diagram" width="400">
 
-To measure how the AI improves with training, we logged its win count over 10,000 training games.
+To measure how the AI improves with training, we logged its win count over 50000 training games.
 1. Self-play training: AI competes against itself to refine strategies.
-2. Training progress logged in train_log.txt every 100 episodes.
+2. Training progress logged in train_log.txt every 5000 episodes.
 3. Final win statistics saved in train_win_results.txt.
 
 ### Method 3: AI Decision-Making Behavior
