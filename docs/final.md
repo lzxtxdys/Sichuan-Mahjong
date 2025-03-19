@@ -12,15 +12,6 @@ frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
 picture-in-picture" allowfullscreen></iframe>
 
 ## Project Summary
-
-Write a
-few paragraphs summarizing the goals of the project (yes, yet again, but updated/improved
-version from the progress report). In particular, make sure that the problem is clearly defined
-here, and feel free to use an image or so to set up the task. Part of the evaluation will be on
-how well you are able to motivate the challenges of the problem, i.e. why it is not trivial, and
-why you need AI/ML algorithms to solve it.
-
-
 My primary goal is that the AI player can constantly learn better strategy from the games, verify if the strategy are actually effective and play along the strategy with calculation system. The expectation is the AI can reach a balance between high winning rate and high value winning combination. 
 
 Challenge 1: Many little bugs.
@@ -37,40 +28,40 @@ However, the win rate is not high enough is definitely a problem since this is w
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
 
 ## Approaches
-Baseline (Naïve) Approach: Random Discard Strategy
+# Baseline (Naïve) Approach: Random Discard Strategy
 A random discard strategy was implemented as the baseline approach, where AI players discard tiles at random, without considering game state, opponent behavior, or optimal strategy. This method is computationally simple, requiring no decision-making algorithms or learning process. It serves as a useful control to compare against more advanced AI approaches.
 
 Advantages:
-✅ Simple to implement – Requires no advanced algorithms, making it easy to test.
-✅ Computationally efficient – Does not require extensive training or memory usage.
-✅ Provides a control benchmark – Helps evaluate the effectiveness of more complex strategies.
+1. Simple to implement – Requires no advanced algorithms, making it easy to test.
+2. Computationally efficient – Does not require extensive training or memory usage.
+3. Provides a control benchmark – Helps evaluate the effectiveness of more complex strategies.
 
 Disadvantages:
-❌ No strategic awareness – The AI does not prioritize strong tile formations or defensive play.
-❌ Ignores opponent moves – Cannot anticipate Peng, Gang, or potential winning hands from other players.
-❌ Very low win rate – Often discards useful tiles, leading to slow and inefficient gameplay.
+1. No strategic awareness – The AI does not prioritize strong tile formations or defensive play.
+2. Ignores opponent moves – Cannot anticipate Peng, Gang, or potential winning hands from other players.
+3. Very low win rate – Often discards useful tiles, leading to slow and inefficient gameplay.
 
 This baseline approach was used to test how well a trained AI performs against purely random players, serving as a benchmark to measure AI progress.
 
-Proposed Approach: Reinforcement Learning (RL) with Q-Learning
+# Proposed Approach: Reinforcement Learning (RL) with Q-Learning
 To create a more competitive AI, we implemented Q-learning, a model-free reinforcement learning algorithm that allows the AI to learn from past decisions and optimize its tile discards based on experience. The AI maintains a Q-table, where it stores state-action pairs and updates them based on rewards received from game outcomes. The AI prioritizes discards based on learned experience, selecting tiles that maximize its winning potential while minimizing the risk of assisting opponents.
 
 Advantages:
-Learns from experience – Improves decision-making over time by updating the Q-table.
-Strategic tile selection – Prioritizes discards that increase the chance of forming valid Hu hands.
-Defensive play – Learns to avoid discarding dangerous tiles that could help opponents win.
-Higher win rate – Outperforms the random discard strategy after sufficient training.
+1. Learns from experience – Improves decision-making over time by updating the Q-table.
+2. Strategic tile selection – Prioritizes discards that increase the chance of forming valid Hu hands.
+3. Defensive play – Learns to avoid discarding dangerous tiles that could help opponents win.
+4. Higher win rate – Outperforms the random discard strategy after sufficient training.
 
 Disadvantages:
-Defensive Strategy – rather to keep dangerous tiles even if it may lead itself to not hu.
-Slow convergence – Learning efficiency is limited by the exploration-exploitation tradeoff.
-Memory-intensive – The Q-table grows significantly with state complexity, leading to potential scalability issues.
-Limited generalization – Does not easily adapt to unseen strategies or advanced human play styles.
+1. Defensive Strategy – rather to keep dangerous tiles even if it may lead itself to not hu.
+2. Slow convergence – Learning efficiency is limited by the exploration-exploitation tradeoff.
+3. Memory-intensive – The Q-table grows significantly with state complexity, leading to potential scalability issues.
+3. Limited generalization – Does not easily adapt to unseen strategies or advanced human play styles.
 
 While Q-learning significantly improves the AI’s performance over random discards, it is still limited by its reliance on discrete state-action pairs, making it less effective in highly variable game scenarios.
 
 ## Evaluation
-Method 1: 4AI Game VS 1AI Game.
+# Method 1: 4AI Game VS 1AI Game.
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
 
 train_win_results.txt------4AI players game result.
@@ -78,29 +69,29 @@ ai_win_rate.txt------------1AI player game result.
 
 In this photo, you can see that 1AI winning games count is 20 times of the 4AI one. It means that the AI player performs better by playing along the RL-based decision-making and utilizing the tiles calculation board system. As we can see, The random discard strategy is ineffective, reinforcing the value of AI decision-making and AI performance is stable, suggesting that it learned optimal strategies over training.
 
-Method 2: Learning Over Time
+# Method 2: Learning Over Time
 <img src="images/problem4.png" alt="Problem Diagram" width="400">
 
 To measure how the AI improves with training, we logged its win count over 10,000 training games.
-Self-play training: AI competes against itself to refine strategies.
-Training progress logged in train_log.txt every 100 episodes.
-Final win statistics saved in train_win_results.txt.
+1. Self-play training: AI competes against itself to refine strategies.
+2. Training progress logged in train_log.txt every 100 episodes.
+3. Final win statistics saved in train_win_results.txt.
 
-Method 3: AI Decision-Making Behavior
+# Method 3: AI Decision-Making Behavior
 <img src="images/problem4.png" alt="Problem Diagram" width="400">
 
 To analyze how well the AI plays, we observed several decision-making patterns that emerged
 
 AI Strengths:
-Strategically avoids discarding tiles that may complete opponents' sets.
-Recognizes safe discards in the late game when fewer tiles remain.
-Consistently builds valid Mahjong hands, prioritizing Peng and Hu opportunities. Also, in the lastest 100 games, I can see the trend of making high-value combinations
+1. Strategically avoids discarding tiles that may complete opponents' sets.
+2. Recognizes safe discards in the late game when fewer tiles remain.
+3. Consistently builds valid Mahjong hands, prioritizing Peng and Hu opportunities. Also, in the lastest 100 games, I can see the trend of making high-value combinations
 
 
-Goal	                                                       Achieved?	                         Notes
-Build an AI capable of learning optimal Mahjong strategies	      ✅	            RL-trained AI achieves 19.94% win rate
-Track AI improvement through self-play	                          ✅	            AI steadily improves performance over training
-Test AI against weaker random players	                          ✅	            AI dominates random players in controlled experiments
+Goal
+1. Build an AI capable of learning optimal Mahjong strategies     (achieved)	            RL-trained AI achieves 19.94% win rate
+2. Track AI improvement through self-play                         (achieved)                AI steadily improves performance over training
+3. Test AI against weaker random players                          (achieved)                AI dominates random players in controlled experiments
 
 ## References
 1. https://www.geeksforgeeks.org/decision-tree/
