@@ -7,9 +7,9 @@ Source code: https://github.com/lzxtxdys/Mahjong
 
 ## Final Report Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4jGCWwF3Yqg?si=pwzb_LACY3AJcRax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LJN50ckavMY?si=Qth-NGE7ci7xbS4S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-if the video is not able to show, link is here: https://youtu.be/4jGCWwF3Yqg
+if the video is not valid, link is here: https://www.youtube.com/watch?v=LJN50ckavMY
 
 ## Project Summary
 My primary goal is that the AI player can constantly learn better strategy from the games, verify if the strategy are actually effective and play along the strategy with calculation system. The expectation is the AI can reach a balance between high winning rate and high value winning combination. 
@@ -71,7 +71,7 @@ ai_win_rate.txt------------1AI player game result.
 In this photo, you can see that 1AI winning games count is 20 times of the 4AI one. It means that the AI player performs better by playing along the RL-based decision-making and utilizing the tiles calculation board system. As we can see, The random discard strategy is ineffective, reinforcing the value of AI decision-making and AI performance is stable, suggesting that it learned optimal strategies over training.
 
 ### Method 2: Learning Over Time
-<img src="images/problem2.png" alt="Problem Diagram" width="400">
+<img src="images/problem4.png" alt="Problem Diagram" width="400">
 
 To measure how the AI improves with training, we logged its win count over 10,000 training games.
 1. Self-play training: AI competes against itself to refine strategies.
