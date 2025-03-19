@@ -10,6 +10,8 @@ Source code: https://github.com/lzxtxdys/Mahjong
 <iframe width="560" height="315" src="https://youtu.be/embed/4jGCWwF3Yqg" 
 frameborder="0" allowfullscreen></iframe>
 
+if the video is not able to show, link is here: https://youtu.be/4jGCWwF3Yqg
+
 ## Project Summary
 My primary goal is that the AI player can constantly learn better strategy from the games, verify if the strategy are actually effective and play along the strategy with calculation system. The expectation is the AI can reach a balance between high winning rate and high value winning combination. 
 
