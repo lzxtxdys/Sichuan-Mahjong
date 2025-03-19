@@ -28,7 +28,7 @@ However, the win rate is not high enough is definitely a problem since this is w
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
 
 ## Approaches
-# Baseline (Naïve) Approach: Random Discard Strategy
+### Baseline (Naïve) Approach: Random Discard Strategy
 A random discard strategy was implemented as the baseline approach, where AI players discard tiles at random, without considering game state, opponent behavior, or optimal strategy. This method is computationally simple, requiring no decision-making algorithms or learning process. It serves as a useful control to compare against more advanced AI approaches.
 
 Advantages:
@@ -43,7 +43,7 @@ Disadvantages:
 
 This baseline approach was used to test how well a trained AI performs against purely random players, serving as a benchmark to measure AI progress.
 
-# Proposed Approach: Reinforcement Learning (RL) with Q-Learning
+### Proposed Approach: Reinforcement Learning (RL) with Q-Learning
 To create a more competitive AI, we implemented Q-learning, a model-free reinforcement learning algorithm that allows the AI to learn from past decisions and optimize its tile discards based on experience. The AI maintains a Q-table, where it stores state-action pairs and updates them based on rewards received from game outcomes. The AI prioritizes discards based on learned experience, selecting tiles that maximize its winning potential while minimizing the risk of assisting opponents.
 
 Advantages:
@@ -61,7 +61,7 @@ Disadvantages:
 While Q-learning significantly improves the AI’s performance over random discards, it is still limited by its reliance on discrete state-action pairs, making it less effective in highly variable game scenarios.
 
 ## Evaluation
-# Method 1: 4AI Game VS 1AI Game.
+### Method 1: 4AI Game VS 1AI Game.
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
 
 train_win_results.txt------4AI players game result.
@@ -69,7 +69,7 @@ ai_win_rate.txt------------1AI player game result.
 
 In this photo, you can see that 1AI winning games count is 20 times of the 4AI one. It means that the AI player performs better by playing along the RL-based decision-making and utilizing the tiles calculation board system. As we can see, The random discard strategy is ineffective, reinforcing the value of AI decision-making and AI performance is stable, suggesting that it learned optimal strategies over training.
 
-# Method 2: Learning Over Time
+### Method 2: Learning Over Time
 <img src="images/problem4.png" alt="Problem Diagram" width="400">
 
 To measure how the AI improves with training, we logged its win count over 10,000 training games.
@@ -77,7 +77,7 @@ To measure how the AI improves with training, we logged its win count over 10,00
 2. Training progress logged in train_log.txt every 100 episodes.
 3. Final win statistics saved in train_win_results.txt.
 
-# Method 3: AI Decision-Making Behavior
+### Method 3: AI Decision-Making Behavior
 <img src="images/problem4.png" alt="Problem Diagram" width="400">
 
 To analyze how well the AI plays, we observed several decision-making patterns that emerged
