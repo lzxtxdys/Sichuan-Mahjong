@@ -18,15 +18,18 @@ My primary goal is that the AI player can constantly learn better strategy from 
 Challenge 1: Many little bugs.
 The game is full of rule interactions hence inevitablly there will be few tiny bugs that we cannot find out where the problem is.
 <img src="images/problem1.png" alt="Problem Diagram" width="400">
+![Mahjong Screenshot](images/problem1.png)
 
 Challenge 2: It is hard to completely simulate a "right" strategy. 
 It means that sometimes there are no absolute right or wrong in the strategy. My algorithm method is to assign parameter "risk" to evaluate whether this tile is a safe or a dangerous one. The risk level depends on whether this tile has been exposed or discarded. For example, if a tile has never been exposed or discarded, it is highly possible that people are holding them and if a player discard it, someone will win. However, it is possible that all tiles are staying in the rest deck. In this situation, the player will choose to hold the marked "high risk & dangerous" tile, even if it may cause the holding tile player not to win.
 <img src="images/problem2.png" alt="Problem Diagram" width="400">
+![Mahjong Screenshot](images/problem2.png)
 
 Challenge 3: The win rate and high-value counts are not as high as we expected. 
 In this project, we are using decision tree and Q-table to achieve constance choices and calculations. However, these two strategies tend to know what tiles will make others to win so that it will always keep it. Such a behavior leads to a consequence that such kept dangerous tiles will take a place in their hands so that the player has to abandon some drawed tiles that may lead the player to win or pursue a higher value combination. As shown in the following picture, the train_win_results.txt is 4AI players game result and the ai_win_rate.txt is 1AI player game result. As we can see, compared to the 4AI game, the 1AI has nearly 20 times win counts. But it is still only 20%
 However, the win rate is not high enough is definitely a problem since this is what AI should do. For the high-value combination counts, I am not sure whether it is a problem. Through the project working, I have checked some great human players video and I have noticed that even if their winning rate is higher than other players, they are mostly not winning by getting high-value combination, which means they are also using defensive strategy. This is reasonable because if one player is always avoiding losing credits, even if they win by a low-value combination, they are also winning credits.
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
+![Mahjong Screenshot](images/problem3.png)
 
 ## Approaches
 ### Baseline (Naïve) Approach: Random Discard Strategy
@@ -64,6 +67,7 @@ While Q-learning significantly improves the AI’s performance over random disca
 ## Evaluation
 ### Method 1: 4AI Game VS 1AI Game.
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
+![Mahjong Screenshot](images/problem3.png)
 
 train_win_results.txt------4AI players game result.
 ai_win_rate.txt------------1AI player game result.
@@ -72,6 +76,7 @@ In this photo, you can see that 1AI winning games count is 20 times of the 4AI o
 
 ### Method 2: Learning Over Time
 <img src="images/problem2.png" alt="Problem Diagram" width="400">
+![Mahjong Screenshot](images/problem2.png)
 
 To measure how the AI improves with training, we logged its win count over 10,000 training games.
 1. Self-play training: AI competes against itself to refine strategies.
@@ -80,6 +85,7 @@ To measure how the AI improves with training, we logged its win count over 10,00
 
 ### Method 3: AI Decision-Making Behavior
 <img src="images/problem2.png" alt="Problem Diagram" width="400">
+![Mahjong Screenshot](images/problem2.png)
 
 To analyze how well the AI plays, we observed several decision-making patterns that emerged
 
