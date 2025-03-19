@@ -7,9 +7,9 @@ Source code: https://github.com/lzxtxdys/Mahjong
 
 ## Final Report Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LJN50ckavMY?si=Qth-NGE7ci7xbS4S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4BMGZhQCTJA?si=_sEGY9fQRvBDG1lE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-if the video is not valid, link is here: https://www.youtube.com/watch?v=LJN50ckavMY
+if the video is not valid, link is here: https://www.youtube.com/watch?v=4BMGZhQCTJA
 
 ## Project Summary
 My primary goal is that the AI player can constantly learn better strategy from the games, verify if the strategy are actually effective and play along the strategy with calculation system. The expectation is the AI can reach a balance between high winning rate and high value winning combination. 
