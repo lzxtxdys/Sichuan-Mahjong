@@ -71,7 +71,7 @@ ai_win_rate.txt------------1AI player game result.
 In this photo, you can see that 1AI winning games count is 20 times of the 4AI one. It means that the AI player performs better by playing along the RL-based decision-making and utilizing the tiles calculation board system. As we can see, The random discard strategy is ineffective, reinforcing the value of AI decision-making and AI performance is stable, suggesting that it learned optimal strategies over training.
 
 ### Method 2: Learning Over Time
-<img src="images/problem4.png" alt="Problem Diagram" width="400">
+<img src="images/problem2.png" alt="Problem Diagram" width="400">
 
 To measure how the AI improves with training, we logged its win count over 10,000 training games.
 1. Self-play training: AI competes against itself to refine strategies.
@@ -79,7 +79,7 @@ To measure how the AI improves with training, we logged its win count over 10,00
 3. Final win statistics saved in train_win_results.txt.
 
 ### Method 3: AI Decision-Making Behavior
-<img src="images/problem4.png" alt="Problem Diagram" width="400">
+<img src="images/problem2.png" alt="Problem Diagram" width="400">
 
 To analyze how well the AI plays, we observed several decision-making patterns that emerged
 
