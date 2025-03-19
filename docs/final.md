@@ -25,6 +25,7 @@ It means that sometimes there are no absolute right or wrong in the strategy. My
 Challenge 3: The win rate and high-value counts are not as high as we expected. 
 In this project, we are using decision tree and Q-table to achieve constance choices and calculations. However, these two strategies tend to know what tiles will make others to win so that it will always keep it. Such a behavior leads to a consequence that such kept dangerous tiles will take a place in their hands so that the player has to abandon some drawed tiles that may lead the player to win or pursue a higher value combination. As shown in the following picture, the train_win_results.txt is 4AI players game result and the ai_win_rate.txt is 1AI player game result. As we can see, compared to the 4AI game, the 1AI has nearly 20 times win counts. But it is still only 20%
 However, the win rate is not high enough is definitely a problem since this is what AI should do. For the high-value combination counts, I am not sure whether it is a problem. Through the project working, I have checked some great human players video and I have noticed that even if their winning rate is higher than other players, they are mostly not winning by getting high-value combination, which means they are also using defensive strategy. This is reasonable because if one player is always avoiding losing credits, even if they win by a low-value combination, they are also winning credits.
+
 <img src="images/problem3.png" alt="Problem Diagram" width="400">
 
 ## Approaches
