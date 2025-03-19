@@ -7,9 +7,8 @@ Source code: https://github.com/lzxtxdys/Mahjong
 
 ## Final Report Video
 
-<iframe width="560" height="315" src="https://youtu.be/4jGCWwF3Yqg" 
-frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/embed/4jGCWwF3Yqg" 
+frameborder="0" allowfullscreen></iframe>
 
 ## Project Summary
 My primary goal is that the AI player can constantly learn better strategy from the games, verify if the strategy are actually effective and play along the strategy with calculation system. The expectation is the AI can reach a balance between high winning rate and high value winning combination. 
@@ -19,7 +18,7 @@ The game is full of rule interactions hence inevitablly there will be few tiny b
 <img src="images/problem1.png" alt="Problem Diagram" width="400">
 
 Challenge 2: It is hard to completely simulate a "right" strategy. 
-It means that sometimes there are no absolute right or wrong in the strategy. My algorithm method is to assign parameter "risk" to evaluate whether this tile is a safe or a dangerous one. The risk level depends on whether this tile has been exposed or discarded. For example, if a tile has never been exposed or discarded, it is highly possible that people are holding them and if a player discard it, someone will win. However, it is possible that all tiles are staying in the rest deck. In this situation, the player will choose to hold the marked "high risk & dangerous" tile, even if it may cause the holding tile player not to win
+It means that sometimes there are no absolute right or wrong in the strategy. My algorithm method is to assign parameter "risk" to evaluate whether this tile is a safe or a dangerous one. The risk level depends on whether this tile has been exposed or discarded. For example, if a tile has never been exposed or discarded, it is highly possible that people are holding them and if a player discard it, someone will win. However, it is possible that all tiles are staying in the rest deck. In this situation, the player will choose to hold the marked "high risk & dangerous" tile, even if it may cause the holding tile player not to win.
 <img src="images/problem2.png" alt="Problem Diagram" width="400">
 
 Challenge 3: The win rate and high-value counts are not as high as we expected. 
